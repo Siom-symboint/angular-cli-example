@@ -1,4 +1,4 @@
-import { Hero } from 'src/app/heroes/hero';
+import { Hero } from 'src/app/class/hero';
 
 
 export const HEROES: Hero[] = [

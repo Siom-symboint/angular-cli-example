@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
+import { Hero } from '../class/hero';
 import { HEROES } from 'src/assets/heros';
 import { HeroService } from '../service/hero.service';
 
@@ -12,7 +12,6 @@ import { HeroService } from '../service/hero.service';
 
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  selectedHero: Hero;
   hero: Hero = {
     id: 1,
     name: 'Windstorm'
@@ -21,10 +20,6 @@ export class HeroesComponent implements OnInit {
     private heroService: HeroService
   ) { }
 
-  onSelect(hero: Hero) {
-    console.log(hero);
-    this.selectedHero = hero;
-  }
 
   getHeroList(): void {
     this.heroService.getHeros().subscribe(heroes => this.heroes = heroes);
