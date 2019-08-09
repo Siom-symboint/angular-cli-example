@@ -6,7 +6,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, CountdownTimerComponent, CountdownLocalVarParentComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -35,7 +35,9 @@ import { HeroSearchComponent } from './components/hero-search/hero-search.compon
       HeroDetailComponent,
       MessagesComponent,
       DashboardComponent,
-      HeroSearchComponent
+      HeroSearchComponent,
+      CountdownTimerComponent,
+      CountdownLocalVarParentComponent
    ],
    imports: [
       BrowserModule,

@@ -43,6 +43,13 @@ export class HeroService {
       );
   }
 
+  /**
+   * 
+   * @description  this is the seconde way that Parent  interact with child;
+   * the first way is in the src/app.component.ts:CountdownTimerComponent and
+   * CountdownLocalVarParentComponent  which is the parent; local/template  variable
+   * 
+   */
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
   }
