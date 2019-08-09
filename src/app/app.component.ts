@@ -65,6 +65,12 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
   <pre>this is the message  showing in parent but from child:
   {{timer.message}}</pre>
   `,
+  styles:[
+    `:host {
+      display: block;
+      border: 1px solid black;
+    }`
+  ]
 })
 
 // export class CountdownLocalVarParentComponent {
