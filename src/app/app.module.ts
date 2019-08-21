@@ -6,7 +6,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, CountdownTimerComponent, CountdownLocalVarParentComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -42,7 +42,9 @@ import { AddBannerComponent } from './components/add-banner/add-banner.component
       MessagesComponent,
       DashboardComponent,
       HeroSearchComponent,
-      AddBannerComponent
+      AddBannerComponent,
+      CountdownTimerComponent,
+      CountdownLocalVarParentComponent
    ],
    imports: [
       BrowserModule,
