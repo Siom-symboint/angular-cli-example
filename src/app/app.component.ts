@@ -79,7 +79,7 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
   <pre>this is the message  showing in parent but from child:
   {{timer.message}}</pre>
   `,
-  styles:[
+  styles: [
     `:host {
       display: block;
       border: 1px solid black;
@@ -97,7 +97,7 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
  */
 export class CountdownLocalVarParentComponent implements AfterViewInit {
 
-  @ViewChild(CountdownTimerComponent, { static: false }) timerComponent: CountdownTimerComponent
+  @ViewChild(CountdownTimerComponent, { static: false }) timerComponent: CountdownTimerComponent;
 
   ngAfterViewInit() {
     setTimeout(() => {

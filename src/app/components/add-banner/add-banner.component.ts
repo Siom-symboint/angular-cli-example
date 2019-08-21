@@ -1,4 +1,12 @@
-import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ViewChild, ComponentFactoryResolver, Type } from '@angular/core';
+interface AdComponent {
+  data: any;
+}
+
+class AdItem {
+  constructor(public component: Type<any>, public data: any) {}
+}
+
 
 @Component({
   selector: 'app-add-banner',
@@ -9,8 +17,9 @@ import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
 export class AdBannerComponent implements OnInit, OnDestroy {
   @Input() ads: [];
   currentAdIndex = -1;
-  @ViewChild(AdDirective, { static: true }) adHost: AdDirective;
+  // @ViewChild(AdDirective, { static: true }) adHost: AdDirective;
   interval: any;
+  adHost: any;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
@@ -24,16 +33,16 @@ export class AdBannerComponent implements OnInit, OnDestroy {
   }
 
   loadComponent() {
-    this.currentAdIndex = (this.currentAdIndex + 1) % this.ads.length;
-    let adItem = this.ads[this.currentAdIndex];
+    this.currentAdIndex = (this.currentAdIndex + 1) % this.ads.length;  // 取余递增
+    const adItem: AdItem = this.ads[this.currentAdIndex];
 
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(adItem.component);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(adItem.component);
 
-    let viewContainerRef = this.adHost.viewContainerRef;
+    const viewContainerRef = this.adHost.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
-    (<AdComponent>componentRef.instance).data = adItem.data;
+    const componentRef = viewContainerRef.createComponent(componentFactory);
+    (componentRef.instance as AdComponent).data = adItem.data;
   }
 
   getAds() {

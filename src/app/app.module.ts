@@ -13,7 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InMemoryDataService } from './service/InMemoryData.service';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
-import { AddBannerComponent } from './components/add-banner/add-banner.component';
+import { AdBannerComponent } from './components/add-banner/add-banner.component';
 
 /**
  * Angular 的基本构造块是 NgModule，它为组件提供了编译的上下文环境。 NgModule 会把相关的代码收集到一些功能集中。Angular 应用就是
@@ -42,7 +42,7 @@ import { AddBannerComponent } from './components/add-banner/add-banner.component
       MessagesComponent,
       DashboardComponent,
       HeroSearchComponent,
-      AddBannerComponent,
+      AdBannerComponent,
       CountdownTimerComponent,
       CountdownLocalVarParentComponent
    ],
