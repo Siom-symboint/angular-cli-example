@@ -13,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InMemoryDataService } from './service/InMemoryData.service';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { AddBannerComponent } from './components/add-banner/add-banner.component';
 
 /**
  * Angular 的基本构造块是 NgModule，它为组件提供了编译的上下文环境。 NgModule 会把相关的代码收集到一些功能集中。Angular 应用就是
@@ -28,14 +29,20 @@ import { HeroSearchComponent } from './components/hero-search/hero-search.compon
  * 服务类的元数据提供了一些信息，Angular 要用这些信息来让组件可以通过依赖注入（DI）使用该服务。
  * 应用的组件通常会定义很多视图，并进行分级组织。 Angular 提供了 Router 服务来帮助你定义视图之间的导航路径。 路由器提供了先进的浏览器内导航功能。
  */
+/**
+ * NgModule 为其中的组件提供了一个编译上下文环境。根模块总会有一个根组件，并在引导期间创建它。 但是，任何模块都能包含任意数量的其它组件，
+ * 这些组件可以通过路由器加载，也可以通过模板创建。那些属于这个 NgModule 的组件会共享同一个编译上下文环境。
+ */
 @NgModule({
    declarations: [
+      // 任何模块都能包含任意数量的其它组件，这些组件可以通过路由器加载，
       AppComponent,
       HeroesComponent,
       HeroDetailComponent,
       MessagesComponent,
       DashboardComponent,
-      HeroSearchComponent
+      HeroSearchComponent,
+      AddBannerComponent
    ],
    imports: [
       BrowserModule,
