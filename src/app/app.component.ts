@@ -8,7 +8,7 @@ import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit } from '@angular
   // templateUrl: './app.component.html',
   template: `<div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to {{ title  }}!  is {{3|exponentialStrength:2}}
   </h1>
 </div>
 <nav>

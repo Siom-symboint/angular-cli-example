@@ -15,6 +15,8 @@ import { InMemoryDataService } from './service/InMemoryData.service';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 import { AdBannerComponent } from './components/add-banner/add-banner.component';
 import { AdDirective } from './directives/ad.directive';
+import { UnlessDirective } from './directives/structurall-directive.directive';
+import { ExponentialStrengthPipe } from './pipe/my-pipe.pipe';
 
 /**
  * Angular 的基本构造块是 NgModule，它为组件提供了编译的上下文环境。 NgModule 会把相关的代码收集到一些功能集中。Angular 应用就是
@@ -46,7 +48,9 @@ import { AdDirective } from './directives/ad.directive';
       AdBannerComponent,
       CountdownTimerComponent,
       CountdownLocalVarParentComponent,
-      AdDirective
+      AdDirective,
+      UnlessDirective,
+      ExponentialStrengthPipe
    ],
    imports: [
       BrowserModule,

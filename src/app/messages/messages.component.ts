@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MessagesComponent implements OnInit {
 
   constructor(
-    private messagesService: MessagesService
+    public messagesService: MessagesService
   ) { }
 
   ngOnInit() {
